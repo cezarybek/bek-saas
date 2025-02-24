@@ -1,10 +1,14 @@
 import FAQListItem from "@/components/FAQListItem";
 import ListItem from "@/components/ListItem";
-import Link from "next/link";
 import productDemo from "@/public/assets/productDemo.jpeg";
 import Image from "next/image";
+import { auth } from "@/auth";
+import LoginButton from "@/components/LoginButton";
 
-export default function Home() {
+const Home = async () => {
+  const session = await auth();
+  console.log(session);
+
   const pricingFeatures = [
     "Collect customer feedback",
     "Unlimited boards",
@@ -46,9 +50,7 @@ export default function Home() {
               FAQ
             </a>
           </div>
-          <Link href="/login" className="btn btn-primary">
-            Login
-          </Link>
+          <LoginButton session={session} />
         </div>
       </section>
       <section className="px-8 py-32 lg:text-left font-extrabold text-center max-w-5xl mx-auto flex flex-col lg:flex-row gap-14 items-center lg:items-start">
@@ -65,9 +67,7 @@ export default function Home() {
             Create a feedback board in minutes, prioritize features and build
             products your customers will love.
           </div>
-          <Link href="/dashboard" className="btn btn-primary my-2">
-            Dashboard
-          </Link>
+          <LoginButton session={session} />
         </div>
       </section>
       <section className="bg-base-200" id="pricing">
@@ -92,9 +92,7 @@ export default function Home() {
                   <ListItem text={feature} key={feature} />
                 ))}
               </ul>
-              <Link href="/dashboard" className="btn btn-primary my-2">
-                Buy now
-              </Link>
+              <LoginButton extraClass="w-full" />
             </div>
           </div>
         </div>
@@ -118,4 +116,6 @@ export default function Home() {
       </section>
     </main>
   );
-}
+};
+
+export default Home;
