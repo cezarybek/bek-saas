@@ -7,10 +7,7 @@ const LoginButton = ({ session, extraClass }) => {
 
   if (session) {
     return (
-      <Link
-        href={dashboardUrl}
-        className={`btn btn-primary mt-3 ${extraClass}`}
-      >
+      <Link href={dashboardUrl} className={`btn btn-primary ${extraClass}`}>
         {session.user.name || "Guest"}
       </Link>
     );
