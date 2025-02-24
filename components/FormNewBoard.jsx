@@ -26,7 +26,7 @@ const FormNewBoard = ({}) => {
     } catch (e) {
       const errorMessage =
         e.response?.data?.error ||
-        error.message ||
+        e.message ||
         "An error occurred. Please try again.";
       toast.error(errorMessage);
     } finally {

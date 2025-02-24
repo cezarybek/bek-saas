@@ -3,6 +3,7 @@ import FormNewBoard from "@/components/FormNewBoard";
 import LogoutButton from "@/components/LogoutButton";
 import connectMongo from "@/libs/mongoose";
 import User from "@/models/User";
+import Link from "next/link";
 
 const getUser = async () => {
   const session = await auth();
@@ -30,8 +31,13 @@ export default async function Dashboard() {
           </h1>
           <ul className="space-y-4">
             {user.boards.map((board) => (
-              <li className="bg-base-100 p-6 rounded-3xl" key={board._id}>
-                {board.name}
+              <li key={board._id}>
+                <Link
+                  className="bg-base-100 p-6 rounded-3xl block hover:bg-neutral hover:text-neutral-content duration-100"
+                  href={`/dashboard/board/${board._id}`}
+                >
+                  {board.name}
+                </Link>
               </li>
             ))}
           </ul>
