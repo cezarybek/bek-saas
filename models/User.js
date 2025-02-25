@@ -20,6 +20,14 @@ const userSchema = mongoose.Schema({
       ref: "Board",
     },
   ],
+  hasAccess: {
+    type: Boolean,
+    default: false,
+  },
+  customerId: {
+    type: String,
+    default: null,
+  },
 });
 
 export default mongoose.models.User || mongoose.model("User", userSchema);

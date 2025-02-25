@@ -4,6 +4,7 @@ import productDemo from "@/public/assets/productDemo.jpeg";
 import Image from "next/image";
 import { auth } from "@/auth";
 import LoginButton from "@/components/LoginButton";
+import CheckoutButton from "@/components/CheckoutButton";
 
 const Home = async () => {
   const session = await auth();
