@@ -16,7 +16,6 @@ export async function POST(req) {
         { status: 400 }
       );
     }
-
     const session = await auth();
     await connectMongo();
     const user = await User.findById(session.user.id);

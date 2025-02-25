@@ -6,7 +6,6 @@ import toast from "react-hot-toast";
 
 const ButtonDeleteBorder = ({ boardId }) => {
   const router = useRouter();
-  console.log(boardId);
 
   const handleDeleteBoard = async () => {
     try {

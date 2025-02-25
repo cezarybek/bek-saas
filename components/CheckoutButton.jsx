@@ -35,7 +35,7 @@ const CheckoutButton = ({}) => {
       {isLoading && (
         <span className="loading loading-spinner loading-xs"></span>
       )}
-      Checkout
+      Subscribe
     </button>
   );
 };
