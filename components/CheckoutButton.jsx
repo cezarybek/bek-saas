@@ -15,7 +15,7 @@ const CheckoutButton = ({}) => {
     try {
       const response = await axios.post("/api/billing/create-checkout", {
         successUrl: `${window.location.href}/success`,
-        cancelUrl: `${window.location.href}/dashboard`,
+        cancelUrl: `${window.location.href}`,
       });
 
       window.location.href = response.data.url;
