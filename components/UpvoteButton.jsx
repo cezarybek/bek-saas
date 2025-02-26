@@ -1,14 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { ChevronUpIcon } from "@heroicons/react/16/solid";
 
 const UpvoteButton = ({ postId, initalVotesCounter }) => {
+  const localStorageVoteKey = `prioritize_vote_${postId}`;
+
   const [isVoting, setIsVoting] = useState(false);
   const [hasVoted, setHasVoted] = useState(false);
   const [votesCounter, setVotesCounter] = useState(initalVotesCounter);
+
+  useEffect(() => {
+    const hasVoted = localStorage.getItem(localStorageVoteKey) === "true";
+    setHasVoted(hasVoted);
+  }, []);
 
   const handleUpvote = async () => {
     if (isVoting) return;
@@ -21,10 +28,12 @@ const UpvoteButton = ({ postId, initalVotesCounter }) => {
         response = await axios.delete(`/api/vote?postId=${postId}`);
         setHasVoted(false);
         setVotesCounter(votesCounter - 1);
+        localStorage.removeItem(localStorageVoteKey);
       } else {
         response = await axios.post(`/api/vote?postId=${postId}`);
         setHasVoted(true);
         setVotesCounter(votesCounter + 1);
+        localStorage.setItem(localStorageVoteKey, "true");
       }
       setHasVoted(response.data.hasUpvoted);
       toast.success("Post upvoted successfully.");

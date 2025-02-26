@@ -4,11 +4,9 @@ import productDemo from "@/public/assets/productDemo.jpeg";
 import Image from "next/image";
 import { auth } from "@/auth";
 import LoginButton from "@/components/LoginButton";
-import CheckoutButton from "@/components/CheckoutButton";
 
 const Home = async () => {
   const session = await auth();
-  console.log(session);
 
   const pricingFeatures = [
     "Collect customer feedback",
@@ -19,14 +17,9 @@ const Home = async () => {
 
   const faqs = [
     {
-      question: "How does Bek SaaS work?",
+      question: "How does Prioritize work?",
       answer:
-        "Bek SaaS is a customer feedback tool that helps you collect feedback from your customers and prioritize features based on their feedback.",
-    },
-    {
-      question: "How do I get started?",
-      answer:
-        "You can get started by creating a free account on our website and creating your first feedback board.",
+        "Prioritize is a customer feedback tool that helps you collect feedback from your customers and prioritize features based on their feedback.",
     },
     {
       question: "Can I cancel my subscription?",
@@ -42,7 +35,7 @@ const Home = async () => {
     <main>
       <section className="bg-base-200">
         <div className="flex justify-between items-center px-8 py-4 max-w-5xl mx-auto">
-          <div className="font-bold">Bek SaaS</div>
+          <div className="font-bold">Prioritize</div>
           <div className="space-x-4 max-md:hidden">
             <a className="link link-hover" href="#pricing">
               Pricing

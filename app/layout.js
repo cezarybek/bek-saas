@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Bek SaaS",
+  title: "Prioritize",
   description: "Schedule tasks and manage your team with ease.",
 };
 

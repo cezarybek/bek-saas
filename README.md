@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎯 Prioritize
 
-## Getting Started
+Welcome to **Prioritize** – your go-to project management tool for creating and managing feature request boards! 🚀
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **🔐 Authentication and Plans**: Users can sign up, authenticate, and purchase a plan to manage and create new boards.
+- **📊 Personal Dashboard**: Authenticated users get a personal dashboard to manage their boards.
+- **🌍 Public Access**: Boards are accessible to public users who can upvote features and request new ones.
+- **📈 Feature Ordering**: Features are ordered based on the vote count.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **📝 Sign Up**: Create an account and choose a plan.
+2. **🛠️ Create Boards**: Once authenticated, create new boards from your personal dashboard.
+3. **🗂️ Manage Boards**: Use your dashboard to manage existing boards.
+4. **🌐 Public Interaction**: Share your boards with the public to gather votes and feature requests.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📜 License
 
-## Learn More
+This project is licensed under the MIT License.
 
-To learn more about Next.js, take a look at the following resources:
+## 📬 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For more information, please contact us at [support@cezarybek.com](mailto:cezary@cezarybek.com).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Happy prioritizing! 🎉
