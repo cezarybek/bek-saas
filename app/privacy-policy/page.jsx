@@ -23,7 +23,7 @@
 
 const PrivacyPolicy = () => {
   return (
-    <main className="bg-base-100 pb-8">
+    <main className="bg-base-200 py-8 min-h-screen">
       <div className="max-w-5xl mx-auto p-6 mt-10 card bg-base-100 shadow-xl">
         <div className="card-body">
           <h1 className="card-title text-3xl font-bold mb-4">PRIVACY POLICY</h1>
