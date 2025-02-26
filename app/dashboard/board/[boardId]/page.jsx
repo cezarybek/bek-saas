@@ -12,13 +12,16 @@ import CardPostAdmin from "@/components/CardPostAdmin";
 const getData = async (boardId) => {
   const session = await auth();
   await connectMongo();
+
   const board = await Board.findOne({
     _id: boardId,
-    userId: session?.user?.id,
+    userId: session.user.id,
   });
+
   if (!board) {
     redirect("/dashboard");
   }
+
   const posts = await Post.find({ boardId }).sort({ createdAt: -1 });
   return { board, posts };
 };
